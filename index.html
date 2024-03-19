@@ -28,9 +28,11 @@
             })
 
             window.addEventListener("pagehide", function (e) {
-                if(!$('#btnSubmit').hasClass('disabled')) {
+                if(e.persisted) {
+                    if(!$('#btnSubmit').hasClass('disabled')) {
                     e.preventDefault();
                     e.returnValue = '';
+                }
                 }
             }, false);   
 
