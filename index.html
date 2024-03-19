@@ -28,7 +28,10 @@
 
             function pageHidden(evt)
             {
-                if(!$('#btnSubmit').hasClass('disabled')) {}
+                if(!$('#btnSubmit').hasClass('disabled')) {
+                    e.preventDefault();
+                    e.returnValue = '';
+                }
             }
 
             window.addEventListener("pagehide", pageHidden, false);   
