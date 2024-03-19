@@ -29,12 +29,12 @@
             function pageHidden(evt)
             {
                 if(!$('#btnSubmit').hasClass('disabled')) {
-                    e.preventDefault();
-                    e.returnValue = '';
+                    evt.preventDefault();
+                    evt.returnValue = '';
                 }
             }
 
-            window.addEventListener("pagehide", pageHidden, false);   
+            window.addEventListener("pagehide", pageHidden);   
         });
     </script>
 </body>
